@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::<accountId>:role/Admin"
+      },
+      "Action": "es:DescribeDomain,es:ESHttp*",
+      "Resource": "arn:aws:es:us-east-1:<accountId>:domain/project-domain/*"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::<accountId>:role/service-role/<roleName>"
+      },
+      "Action": "es:DescribeDomain,es:ESHttp*",
+      "Resource": "arn:aws:es:us-east-1:<accountId>:domain/project-domain/*"
+    }
+  ]
+}
