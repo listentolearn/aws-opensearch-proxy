@@ -4,7 +4,7 @@
     {
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::<accountId>:role/service-role/<roleName>"
+        "AWS": "arn:aws:iam::<accountId>:role/<roleName>"
       },
       "Action": "es:DescribeDomain,es:ESHttp*",
       "Resource": "arn:aws:es:us-east-1:<accountId>:domain/project-domain/*"
